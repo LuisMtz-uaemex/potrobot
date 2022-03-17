@@ -6,6 +6,7 @@
 package pb;
 
 import java.awt.Image;
+import java.util.*;
 import javax.swing.*;
 
 /**
@@ -14,7 +15,7 @@ import javax.swing.*;
  */
 public class Tools
   {
-
+    BooT bo=new BooT();
     public Tools()
       {
       }
@@ -26,5 +27,42 @@ public class Tools
         int alto = boton.getHeight();
         ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
         return icono;
+      }
+    public String cadeBoo(String mensaje)
+      {
+        String[] men= mensaje.split("\n");
+        String cadeBoo="";
+          for (int i = 0; i < men.length; i++)
+            {
+                cadeBoo+=bo.pesoBo(men[i].toString())+"|";
+            }
+          return cadeBoo;
+      }
+    public String[][] frecuencia(String mensaje)
+      { 
+        String []pala=bolsa();
+        String[][]resu= new String[pala.length][2];
+        int fre;
+          for (int i = 0; i < pala.length; i++)
+            {
+              fre=bo.frecuencia(mensaje, pala[i]);
+              resu[i][0]=pala[i];
+              resu[i][1]=""+fre;
+            }
+        return resu;
+      }
+    public String[] bolsa()
+      {
+        ManipulaArchivos <String>mani= new ManipulaArchivos<String>();
+        String bol=mani.carga("estres.dat");
+        StringTokenizer tok = new StringTokenizer(bol,"[\n]");
+        String [] bolsaR= new String[tok.countTokens()];
+        int i=0;
+        while(tok.hasMoreElements())
+          {
+            bolsaR[i]=tok.nextToken();
+            i++;
+          }
+        return bolsaR;
       }
   }

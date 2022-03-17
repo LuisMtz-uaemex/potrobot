@@ -23,7 +23,7 @@ public class BooT
     public String pesoBo(String entra)
       {
          ManipulaArchivos <String> arch = new ManipulaArchivos<String>();
-         String s= arch.carga("bolsati.dat");
+         String s= arch.carga("estres.dat");
          StringTokenizer toke= new StringTokenizer(s,"[\n]");
          String rege="";
          while(toke.hasMoreElements())
