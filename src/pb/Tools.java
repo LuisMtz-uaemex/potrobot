@@ -105,4 +105,21 @@ public class Tools
         r = JOptionPane.showConfirmDialog(null, mensa, titu, JOptionPane.YES_NO_OPTION);
         return r;
       }
+    public Icon setIconoB(String url, JButton boton)
+      {
+        ImageIcon icon = new ImageIcon(getClass().getResource(url));
+        int ancho = boton.getWidth();
+        int alto = boton.getHeight();
+        ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+        return icono;
+      }
+
+    public Icon setIconPre(String url, JButton boton, int ancho, int altura)
+      {
+        ImageIcon icon = new ImageIcon(getClass().getResource(url));
+        int anc = boton.getWidth() - ancho;
+        int alt = boton.getHeight() - altura;
+        ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(anc, alt, Image.SCALE_DEFAULT));
+        return icono;
+      }
   }
