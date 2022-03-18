@@ -98,6 +98,15 @@ public class Menssaje extends javax.swing.JFrame
         Tools to = new Tools();
         System.out.println(to.cadeBoo((mensaje.getText()).toUpperCase()));
         to.frecuencia((mensaje.getText()).toUpperCase());
+        String aviso="el usuario";
+        if (to.validaEstres(mensaje.getText().toUpperCase()))
+          {
+            aviso+=" tiene estrés";
+          } else
+          {
+            aviso+=" no tiene estrés";
+          }
+        to.aviso(aviso, "evaluación de estrés");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
