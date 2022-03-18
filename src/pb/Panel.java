@@ -66,6 +66,13 @@ public class Panel extends javax.swing.JFrame
 
         button1.setBackground(new java.awt.Color(255, 255, 255));
         button1.setActionCommand("button1");
+        button1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button1ActionPerformed(evt);
+            }
+        });
 
         button2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -157,7 +164,6 @@ public class Panel extends javax.swing.JFrame
                             .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(70, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel8)
                         .addGap(83, 83, 83))))
         );
@@ -189,10 +195,11 @@ public class Panel extends javax.swing.JFrame
                     .addComponent(button5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(button4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel8)))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -219,6 +226,12 @@ public class Panel extends javax.swing.JFrame
             this.dispose();
           }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button1ActionPerformed
+    {//GEN-HEADEREND:event_button1ActionPerformed
+        new Noti().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button1ActionPerformed
 
     /**
      * @param args the command line arguments

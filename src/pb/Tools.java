@@ -122,4 +122,12 @@ public class Tools
         ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(anc, alt, Image.SCALE_DEFAULT));
         return icono;
       }
+    public Icon setIconoBo(String url, JToggleButton boton)
+      {
+        ImageIcon icon = new ImageIcon(getClass().getResource(url));
+        int ancho = boton.getWidth();
+        int alto = boton.getHeight();
+        ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT));
+        return icono;
+      }
   }
