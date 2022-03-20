@@ -9,16 +9,15 @@ package pb;
  *
  * @author luis
  */
-public class Chat extends javax.swing.JFrame
+public class Calend extends javax.swing.JFrame
   {
     Tools to= new Tools();
     /**
      * Creates new form Noti
      */
-    public Chat()
+    public Calend()
       {
         initComponents();
-        notif();
         button1.setIcon(to.setIconoB("/image/noB.png", button1));
         button1.setPressedIcon(to.setIconPre("/image/noB.png", button1, 1, 1));
         button2.setIcon(to.setIconoB("/image/grupo.png", button2));
@@ -26,11 +25,12 @@ public class Chat extends javax.swing.JFrame
         button3.setIcon(to.setIconoB("/image/equipo.png", button3));
         button3.setPressedIcon(to.setIconPre("/image/equipo.png", button3, 1, 1));
         button4.setIcon(to.setIconoB("/image/caleD.png", button4));
-        button4.setPressedIcon(to.setIconPre("/image/caleD.png", button4, 1, 1));
+       // button4.setPressedIcon(to.setIconPre("/image/caleD.png", button4, 1, 1));
         button5.setIcon(to.setIconoB("/image/conv.png", button5));
-        //button5.setPressedIcon(to.setIconPre("/image/conv.png", button5, 1, 1));
+        button5.setPressedIcon(to.setIconPre("/image/conv.png", button5, 1, 1));
         button6.setIcon(to.setIconoB("/image/email.png", button6));
         button6.setPressedIcon(to.setIconPre("/image/email.png", button6, 1, 1));
+        label8.setIcon(to.setIconoA("/image/marzo.jpg", label8));
       }
 
     /**
@@ -57,16 +57,8 @@ public class Chat extends javax.swing.JFrame
         button6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        mensaje = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        list = new javax.swing.JList<>();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        label8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +96,14 @@ public class Chat extends javax.swing.JFrame
 
         jLabel4.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel4.setText("Calendario");
+
+        button5.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button5ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel5.setText("Mensajes");
@@ -179,100 +179,31 @@ public class Chat extends javax.swing.JFrame
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        mensaje.setColumns(20);
-        mensaje.setRows(5);
-        jScrollPane2.setViewportView(mensaje);
-
-        jButton1.setBackground(new java.awt.Color(0, 118, 255));
-        jButton1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Enviar");
-        jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        list.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
-        jScrollPane1.setViewportView(list);
-
         jLabel7.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
-        jLabel7.setText("Contactos");
-
-        jLabel8.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
-        jLabel8.setText("Mensajes");
-
-        jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
-        jTextField1.setText("    Hola, ¿cómo estás?");
-
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(76, 165, 217));
-        jTextField2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Hola muy bien, ¿y tú?");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel7.setText("Calendario");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(234, 234, 234))
+                        .addGap(273, 273, 273)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)))
-                    .addComponent(jScrollPane1)))
+                .addComponent(label8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -296,29 +227,20 @@ public class Chat extends javax.swing.JFrame
 
     private void button4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button4ActionPerformed
     {//GEN-HEADEREND:event_button4ActionPerformed
-        new Calend().setVisible(true);
-        this.dispose();
+        // TODO add your handling code here:
     }//GEN-LAST:event_button4ActionPerformed
+
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button5ActionPerformed
+    {//GEN-HEADEREND:event_button5ActionPerformed
+        new Chat().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button5ActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button1ActionPerformed
     {//GEN-HEADEREND:event_button1ActionPerformed
         new Noti().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_button1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
-    {//GEN-HEADEREND:event_jButton1ActionPerformed
-        to.frecuencia((mensaje.getText()).toUpperCase());
-        String aviso="el usuario";
-        if (to.validaEstres(mensaje.getText().toUpperCase()))
-        {
-            aviso+=" tiene estrés";
-        } else
-        {
-            aviso+=" no tiene estrés";
-        }
-        to.aviso(aviso, "Evaluación de estrés");
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,16 +264,16 @@ public class Chat extends javax.swing.JFrame
               }
           } catch (ClassNotFoundException ex)
           {
-            java.util.logging.Logger.getLogger(Chat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calend.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (InstantiationException ex)
           {
-            java.util.logging.Logger.getLogger(Chat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calend.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (IllegalAccessException ex)
           {
-            java.util.logging.Logger.getLogger(Chat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calend.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (javax.swing.UnsupportedLookAndFeelException ex)
           {
-            java.util.logging.Logger.getLogger(Chat.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Calend.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           }
         //</editor-fold>
         //</editor-fold>
@@ -361,15 +283,11 @@ public class Chat extends javax.swing.JFrame
           {
             public void run()
               {
-                new Chat().setVisible(true);
+                new Calend().setVisible(true);
               }
           });
       }
-    public void notif()
-      {
-        String[]data={"Saul","Marco","Luis","Juan","Ana","Pedro"};
-        list.setListData(data);
-      }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button1;
@@ -378,7 +296,6 @@ public class Chat extends javax.swing.JFrame
     private javax.swing.JButton button4;
     private javax.swing.JButton button5;
     private javax.swing.JButton button6;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -386,15 +303,8 @@ public class Chat extends javax.swing.JFrame
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JList<String> list;
-    private javax.swing.JTextArea mensaje;
+    private javax.swing.JLabel label8;
     // End of variables declaration//GEN-END:variables
   }
