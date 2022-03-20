@@ -9,16 +9,15 @@ package pb;
  *
  * @author luis
  */
-public class Email extends javax.swing.JFrame
+public class CrearRe extends javax.swing.JFrame
   {
     Tools to= new Tools();
     /**
      * Creates new form Noti
      */
-    public Email()
+    public CrearRe()
       {
         initComponents();
-        notif();
         button1.setIcon(to.setIconoB("/image/noB.png", button1));
         button1.setPressedIcon(to.setIconPre("/image/noB.png", button1, 1, 1));
         button2.setIcon(to.setIconoB("/image/grupo.png", button2));
@@ -57,9 +56,10 @@ public class Email extends javax.swing.JFrame
         button6 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        list = new javax.swing.JList<>();
         jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,13 +90,6 @@ public class Email extends javax.swing.JFrame
         jLabel2.setText("Reuniones");
 
         button3.setBackground(new java.awt.Color(255, 255, 255));
-        button3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                button3ActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel3.setText("Crear reunión");
@@ -202,29 +195,52 @@ public class Email extends javax.swing.JFrame
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        list.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
-        jScrollPane1.setViewportView(list);
-
         jLabel7.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
-        jLabel7.setText("Correo electrónico");
+        jLabel7.setText("Crear nueva reunión");
+
+        jButton1.setBackground(new java.awt.Color(0, 118, 255));
+        jButton1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Ver reuniones");
+
+        jButton2.setBackground(new java.awt.Color(0, 118, 255));
+        jButton2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Crear nueva reunión");
+
+        jButton3.setBackground(new java.awt.Color(0, 118, 255));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Cancelar reunión");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addContainerGap(489, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(172, 172, 172)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,8 +250,7 @@ public class Email extends javax.swing.JFrame
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,14 +288,9 @@ public class Email extends javax.swing.JFrame
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button6ActionPerformed
     {//GEN-HEADEREND:event_button6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button6ActionPerformed
-
-    private void button3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button3ActionPerformed
-    {//GEN-HEADEREND:event_button3ActionPerformed
-        new CrearRe().setVisible(true);
+        new Email().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_button3ActionPerformed
+    }//GEN-LAST:event_button6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,17 +314,21 @@ public class Email extends javax.swing.JFrame
               }
           } catch (ClassNotFoundException ex)
           {
-            java.util.logging.Logger.getLogger(Email.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearRe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (InstantiationException ex)
           {
-            java.util.logging.Logger.getLogger(Email.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearRe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (IllegalAccessException ex)
           {
-            java.util.logging.Logger.getLogger(Email.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearRe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           } catch (javax.swing.UnsupportedLookAndFeelException ex)
           {
-            java.util.logging.Logger.getLogger(Email.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearRe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
           }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -325,14 +339,9 @@ public class Email extends javax.swing.JFrame
           {
             public void run()
               {
-                new Email().setVisible(true);
+                new CrearRe().setVisible(true);
               }
           });
-      }
-    public void notif()
-      {
-        String[]data={"Recibidos","Destacados","Pospuestos","Enviados","Borradores","Spam","Papelera"};
-        list.setListData(data);
       }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -342,6 +351,9 @@ public class Email extends javax.swing.JFrame
     private javax.swing.JButton button4;
     private javax.swing.JButton button5;
     private javax.swing.JButton button6;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -351,7 +363,5 @@ public class Email extends javax.swing.JFrame
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList<String> list;
     // End of variables declaration//GEN-END:variables
   }

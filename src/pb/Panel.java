@@ -75,8 +75,22 @@ public class Panel extends javax.swing.JFrame
         });
 
         button2.setBackground(new java.awt.Color(255, 255, 255));
+        button2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button2ActionPerformed(evt);
+            }
+        });
 
         button3.setBackground(new java.awt.Color(255, 255, 255));
+        button3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
         jLabel1.setText("Bienvenido:");
@@ -94,11 +108,25 @@ public class Panel extends javax.swing.JFrame
         jLabel5.setText("Crear reunión");
 
         button4.setBackground(new java.awt.Color(255, 255, 255));
+        button4.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button4ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
         jLabel6.setText("Calendario");
 
         button5.setBackground(new java.awt.Color(255, 255, 255));
+        button5.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button5ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
         jLabel7.setText("Mensajes");
@@ -107,6 +135,13 @@ public class Panel extends javax.swing.JFrame
         jLabel8.setText("Correo electrónico");
 
         button6.setBackground(new java.awt.Color(255, 255, 255));
+        button6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button6ActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 118, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,10 +188,6 @@ public class Panel extends javax.swing.JFrame
                         .addComponent(jLabel7)
                         .addGap(53, 53, 53)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(107, 107, 107))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,8 +195,14 @@ public class Panel extends javax.swing.JFrame
                             .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(70, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(83, 83, 83))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(107, 107, 107))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(83, 83, 83))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,6 +269,36 @@ public class Panel extends javax.swing.JFrame
         new Noti().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button3ActionPerformed
+    {//GEN-HEADEREND:event_button3ActionPerformed
+        new CrearRe().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button3ActionPerformed
+
+    private void button4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button4ActionPerformed
+    {//GEN-HEADEREND:event_button4ActionPerformed
+        new Calend().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button4ActionPerformed
+
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button5ActionPerformed
+    {//GEN-HEADEREND:event_button5ActionPerformed
+        new Chat().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button5ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button2ActionPerformed
+    {//GEN-HEADEREND:event_button2ActionPerformed
+        new Reunion().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button6ActionPerformed
+    {//GEN-HEADEREND:event_button6ActionPerformed
+        new Email().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button6ActionPerformed
 
     /**
      * @param args the command line arguments

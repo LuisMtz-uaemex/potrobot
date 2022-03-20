@@ -83,6 +83,13 @@ public class Noti extends javax.swing.JFrame
         jLabel2.setText("Reuniones");
 
         button3.setBackground(new java.awt.Color(255, 255, 255));
+        button3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button3ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel3.setText("Crear reunión");
@@ -256,6 +263,12 @@ public class Noti extends javax.swing.JFrame
         new Email().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_button6ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button3ActionPerformed
+    {//GEN-HEADEREND:event_button3ActionPerformed
+        new CrearRe().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button3ActionPerformed
 
     /**
      * @param args the command line arguments
