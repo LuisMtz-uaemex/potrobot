@@ -77,6 +77,13 @@ public class Calend extends javax.swing.JFrame
         jLabel1.setText("Notificaciones");
 
         button2.setBackground(new java.awt.Color(255, 255, 255));
+        button2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button2ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel2.setText("Reuniones");
@@ -107,6 +114,14 @@ public class Calend extends javax.swing.JFrame
 
         jLabel5.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel5.setText("Mensajes");
+
+        button6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                button6ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 10)); // NOI18N
         jLabel6.setText("Correo");
@@ -241,6 +256,18 @@ public class Calend extends javax.swing.JFrame
         new Noti().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button2ActionPerformed
+    {//GEN-HEADEREND:event_button2ActionPerformed
+       new Reunion().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_button6ActionPerformed
+    {//GEN-HEADEREND:event_button6ActionPerformed
+        new Email().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button6ActionPerformed
 
     /**
      * @param args the command line arguments
